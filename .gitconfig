@@ -1,0 +1,23 @@
+[core]
+	editor = vim
+[user]
+	name = Amir Aref
+	email = amiraref808@gmail.com
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[init]
+	defaultBranch = master
+[diff]
+	tool = vscode
+[diff "tool"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[alias]
+	st = status
+	lgf = log --graph --decorate
+	lg = log --graph --decorate --oneline
+	sw = switch
