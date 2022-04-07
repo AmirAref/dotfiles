@@ -21,3 +21,5 @@
 	lgf = log --graph --decorate
 	lg = log --graph --decorate --oneline
 	sw = switch
+[difftool]
+	prompt = false
