@@ -42,7 +42,8 @@ nnoremap <C-/> : NERDCommenterComment<CR>
 ":CocInstall coc-pyright
 
 " customize
-let mapleader = ";"
+nnoremap <SPACE> <Nop>
+let mapleader="\<Space>"
 inoremap fg <Esc>
 set termbidi
 set number
