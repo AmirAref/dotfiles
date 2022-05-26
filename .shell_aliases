@@ -1,0 +1,3 @@
+# all aliases
+alias cfg="/usr/bin/git --work-tree=$HOME --git-dir=$HOME/.cfg"
+
