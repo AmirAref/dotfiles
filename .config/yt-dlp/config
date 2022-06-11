@@ -1,0 +1,14 @@
+# use the proxy
+--proxy socks5://127.0.0.1:9050
+
+# select the best video format but no better than 720                                                                             
+-f "best[height<=720]"
+
+# no overwrite
+-w
+
+# Save directory 
+-o ~/Videos/YouTube/%(title)s.%(ext)s
+
+# for playlist :
+# -o "~/Videos/YouTube/%(playlist_title)s/%(playlist_index)s - %(title)s.%(ext)s"
