@@ -22,5 +22,6 @@
 	lg = log --graph --decorate --oneline
 	sw = switch
 	ch = checkout
+	pom = push origin master
 [difftool]
 	prompt = false
