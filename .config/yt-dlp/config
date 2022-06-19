@@ -8,7 +8,8 @@
 -w
 
 # Save directory 
--o ~/Videos/YouTube/%(title)s.%(ext)s
+# -o ~/Videos/YouTube/%(title)s.%(ext)s
 
 # for playlist :
+-o "~/Videos/YouTube/%(playlist_title)s/%(title)s.%(ext)s"
 # -o "~/Videos/YouTube/%(playlist_title)s/%(playlist_index)s - %(title)s.%(ext)s"
