@@ -1,0 +1,27 @@
+"*":
+  "autocomplete-python":
+    useKite: false
+  core:
+    disabledPackages: [
+      "jupyter-notebook"
+    ]
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "tokyo-night-syntax"
+    ]
+  "exception-reporting":
+    userId: "bfeaf1c3-fad6-4232-8cd4-6d2fb9686a05"
+  "linter-ui-default":
+    showPanel: true
+  minimap:
+    plugins:
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+  "spell-check": {}
+  wakatime:
+    apikey: "Saved in your $WAKATIME_HOME/.wakatime.cfg file"
+  welcome:
+    showOnStartup: false
