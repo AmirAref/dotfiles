@@ -11,6 +11,7 @@ abbr --add ga git add
 abbr --add gc git commit
 abbr --add cfg /usr/bin/git --work-tree=$HOME --git-dir=$HOME/.cfg
 abbr --add cl clear
+abbr --add mk mkdir
 abbr --add jn jupyter-notebook
 
 
@@ -27,3 +28,6 @@ end
 function fish_user_key_bindings
     bind ! bind_bang
 end
+
+# add PATH
+export PATH="/home/amir/.local/bin:$PATH"
