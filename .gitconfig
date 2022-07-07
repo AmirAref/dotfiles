@@ -1,5 +1,5 @@
 [core]
-	editor = vim
+	editor = nvim
 [user]
 	name = Amir Aref
 	email = amiraref808@gmail.com
@@ -15,7 +15,11 @@
 [diff "tool"]
 	cmd = code --wait --diff $LOCAL $REMOTE
 [difftool "vscode"]
-	cmd = code --wait --diff $LOCAL $REMOTE
+    cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+      tool = vscode
+[mergetool "vscode"]
+      cmd = code --wait $MERGED
 [alias]
 	st = status
 	lgf = log --graph --decorate
@@ -25,3 +29,9 @@
 	pom = push origin master
 [difftool]
 	prompt = false
+[safe]
+	directory = /mnt/Main/Programming/python/Telegram bots/heiqiu/Content-Manager
+	directory = /mnt/Main/Programming/python/Telegram bots/heiqiu/Content-Manager
+	directory = /mnt/Main/Programming/python/Telegram bots/heiqiu/Post_Sender
+	directory = /mnt/Main/Programming
+	directory = *
