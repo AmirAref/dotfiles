@@ -1,15 +1,21 @@
 "*":
+  "atom-python-virtualenv": {}
   "autocomplete-python":
     useKite: false
   core:
     disabledPackages: [
       "jupyter-notebook"
+      "sync-settings"
+      "autocomplete-python"
     ]
     telemetryConsent: "no"
     themes: [
       "one-dark-ui"
       "tokyo-night-syntax"
     ]
+  editor:
+    defaultFontSize: 15
+    fontSize: 15
   "exception-reporting":
     userId: "bfeaf1c3-fad6-4232-8cd4-6d2fb9686a05"
   "linter-ui-default":
@@ -20,7 +26,9 @@
       "git-diffDecorationsZIndex": 0
       "highlight-selected": true
       "highlight-selectedDecorationsZIndex": 0
+  "python-autopep8": {}
   "spell-check": {}
+  "sync-settings": {}
   wakatime:
     apikey: "Saved in your $WAKATIME_HOME/.wakatime.cfg file"
   welcome:
