@@ -35,3 +35,9 @@
 	directory = /mnt/Main/Programming/python/Telegram bots/heiqiu/Post_Sender
 	directory = /mnt/Main/Programming
 	directory = *
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
