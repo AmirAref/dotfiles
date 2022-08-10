@@ -4,12 +4,17 @@ set fish_greeting
 source ~/.shell_aliases
 
 # abbreviations
+
+# git
 abbr --add gs git status
+abbr --add gst git stash
 abbr --add gl git log 
 abbr --add glo git log --oneline --all --graph
 abbr --add ga git add
 abbr --add gc git commit
-abbr --add cfg /usr/bin/git --work-tree=$HOME --git-dir=$HOME/.cfg
+abbr --add gp git push
+# system
+abbr --add cfg /usr/bin/git --work-tree=$HOME --git-dir=$HOME/.cfg/.git
 abbr --add cl clear
 abbr --add mk mkdir
 abbr --add jn jupyter-notebook
