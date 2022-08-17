@@ -1,3 +1,6 @@
-[submodule "/home/amir/.tmux/plugins/tpm"]
-	path = /home/amir/.tmux/plugins/tpm
+[submodule "tpm"]
+	path = $HOME/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "/home/amir/.moc/themes"]
+	path = /home/amir/.moc/themes
+	url = https://github.com/wimstefan/mocp-themes

@@ -14,9 +14,10 @@ abbr --add ga git add
 abbr --add gc git commit
 abbr --add gp git push
 # system
-abbr --add cfg /usr/bin/git --work-tree=$HOME --git-dir=$HOME/.cfg/.git
 abbr --add cl clear
 abbr --add mk mkdir
+# cusotm
+abbr --add cfg /usr/bin/git --work-tree=$HOME --git-dir=$HOME/.cfg/
 abbr --add jn jupyter-notebook
 
 
