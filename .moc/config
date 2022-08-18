@@ -88,8 +88,8 @@ ReadTags = no
 
 # Set playback toggles.
 Repeat = yes
-#Shuffle = no
-AutoNext = no
+Shuffle = yes
+AutoNext = yes
 
 # Default FormatString:
 #
