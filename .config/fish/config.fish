@@ -19,6 +19,7 @@ abbr --add mk mkdir
 # cusotm
 abbr --add cfg /usr/bin/git --work-tree=$HOME --git-dir=$HOME/.cfg/
 abbr --add jn jupyter-notebook
+abbr --add subl LANG=en_US.UTF-8 LC_TYPE=en_US.UTF-8 subl
 
 
 # use the last command by !! 
@@ -34,6 +35,10 @@ end
 function fish_user_key_bindings
     bind ! bind_bang
 end
+
+# varibales
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # add PATH
 export PATH="/home/amir/.local/bin:$PATH"

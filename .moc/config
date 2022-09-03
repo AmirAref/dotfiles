@@ -639,7 +639,7 @@ PlaylistFullPaths = no
 #     "S": Stereo
 #     "L"/"R": Left / Right
 #
-#SidPlay2_PlayMode = "M"
+SidPlay2_PlayMode = "S"
 
 # Use start-song information from SID ('yes') or start at first song
 # ('no').  Songs before the start-song won't be played.  (Note that this
