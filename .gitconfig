@@ -30,10 +30,6 @@
 [difftool]
 	prompt = false
 [safe]
-	directory = /mnt/Main/Programming/python/Telegram bots/heiqiu/Content-Manager
-	directory = /mnt/Main/Programming/python/Telegram bots/heiqiu/Content-Manager
-	directory = /mnt/Main/Programming/python/Telegram bots/heiqiu/Post_Sender
-	directory = /mnt/Main/Programming
 	directory = *
 [credential "https://github.com"]
 	helper = 
@@ -41,3 +37,5 @@
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
+[http]
+	proxy = 192.168.1.2:8088
