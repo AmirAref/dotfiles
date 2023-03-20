@@ -16,6 +16,7 @@ abbr --add gp git push
 # system
 abbr --add cl clear
 abbr --add mk mkdir
+abbr --add unset set --erase
 # cusotm
 abbr --add cfg /usr/bin/git --work-tree=$HOME --git-dir=$HOME/.cfg/
 abbr --add jn jupyter-notebook
