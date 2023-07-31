@@ -18,7 +18,7 @@ abbr --add cl clear
 abbr --add mk mkdir
 abbr --add unset set --erase
 # cusotm
-abbr --add cfg /usr/bin/git --work-tree=$HOME --git-dir=$HOME/.cfg/
+abbr --add cfg /usr/bin/git --work-tree=$HOME --git-dir=$HOME/.dotfiles
 abbr --add jn jupyter-notebook
 abbr --add subl LANG=en_US.UTF-8 LC_TYPE=en_US.UTF-8 subl
 

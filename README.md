@@ -20,9 +20,6 @@ cfg config --local status.showUntrackedFiles no
 
 # Set up pre-commit
 GIT_DIR=$HOME/.dotfiles GIT_WORK_TREE=$HOME pre-commit install
-
-# install tpm (tmux plugin manager)
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
 ## install plugins and repositoris (submodules):
