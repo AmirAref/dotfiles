@@ -9,7 +9,7 @@ Plug 'junegunn/fzf.vim'
 " nerdcommenter
 Plug 'preservim/nerdcommenter'
 " auto complete
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
 " airline
 Plug 'vim-airline/vim-airline'
