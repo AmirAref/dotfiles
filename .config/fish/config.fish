@@ -13,6 +13,7 @@ abbr --add glo git log --oneline --all --graph
 abbr --add ga git add
 abbr --add gc git commit
 abbr --add gp git push
+abbr --add gch git checkout
 # system
 abbr --add cl clear
 abbr --add mk mkdir
