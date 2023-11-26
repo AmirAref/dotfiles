@@ -42,5 +42,8 @@ end
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
+#export {all_proxy,ALL_PROXY,http_proxy,HTTP_PROXY}=http://127.0.0.1:2081
+export {no_proxy,NO_PROXY}=127.0.0.1,localhost
+
 # add PATH
 export PATH="/home/amir/.local/bin:$PATH"
