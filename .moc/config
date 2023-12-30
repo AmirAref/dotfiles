@@ -218,7 +218,7 @@ SoundDriver = PULSEAUDIO:JACK:ALSA:OSS
 # /usr/share/moc/themes/ (depends on installation prefix) or
 # ~/.moc/themes/ .
 #
-Theme = hybrid
+Theme = dylanwh 
 # Theme = /usr/local/Cellar/moc/2.5.2_2/share/moc/themes/transparent-background
 
 # The theme used when running on an xterm.
