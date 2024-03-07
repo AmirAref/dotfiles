@@ -76,10 +76,29 @@ vmap <leader>y "+y"
 nmap <leader>y "+y"
 nmap <leader>p "+p"
 " change windows size
-nnoremap <C-Up> :resize +2<CR>
-nnoremap <C-Down> :resize -2<CR>
-nnoremap <C-Left> :vertical resize +2<CR>
-nnoremap <C-Right> :vertical resize -2<CR>
+"nnoremap <C-Up> :resize +2<CR>
+"nnoremap <C-Down> :resize -2<CR>
+"nnoremap <C-Left> :vertical resize +2<CR>
+"nnoremap <C-Right> :vertical resize -2<CR>
+" move between tabs
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+nnoremap <C-Up> :tabfirst<CR>
+nnoremap <C-Down> :tablast<CR>
+
+"" Abbreviations
+"*****************************************************************************
+"" no one is really happy until you have this shortcuts
+cnoreabbrev W! w!
+cnoreabbrev Q! q!
+cnoreabbrev Qall! qall!
+cnoreabbrev Wq wq
+cnoreabbrev Wa wa
+cnoreabbrev wQ wq
+cnoreabbrev WQ wq
+cnoreabbrev W w
+cnoreabbrev Q q
+cnoreabbrev Qall qall
 
 nnoremap <leader>h :set hlsearch!<CR>
 

@@ -27,6 +27,7 @@ abbr --add jn jupyter-notebook
 abbr --add ff fastfetch
 abbr --add kdrf kdeconnect-cli --refresh
 #abbr --add subl LANG=en_US.UTF-8 LC_TYPE=en_US.UTF-8 subl
+abbr --add ptree tree --gitignore -I "__pycache__" -C --dirsfirst --sort mtime -r
 
 # use the last command by !!
 function bind_bang
