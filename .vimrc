@@ -1,19 +1,16 @@
-" Plugs
+" Plugins
 call plug#begin()
-" nerdtree
-Plug 'preservim/nerdtree'
+Plug 'https://github.com/preservim/nerdtree' " NerdTree
+Plug 'https://github.com/vim-airline/vim-airline' " Status bar
+Plug 'https://github.com/vim-airline/vim-airline-themes' " Status bar Themes
+Plug 'https://github.com/neoclide/coc.nvim' " Auto Completion
+Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 " fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " nerdcommenter
 Plug 'preservim/nerdcommenter'
-" auto complete
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'jiangmiao/auto-pairs'
-" airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 " code formatter
 Plug 'prettier/vim-prettier', {
 	  \ 'do': 'yarn install',
@@ -31,20 +28,58 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 
 call plug#end()
 
-" plugs configs
+
+" plugins config
+
+nnoremap <C-f> :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-i> :NERDTreeToggle<CR>
+nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
+
+nnoremap <C-/> : NERDCommenterComment<CR>
+
+let g:airline_powerline_fonts = 1
 let g:ale_fix_on_save = 1
 colorscheme onehalfdark
-map <C-i> :NERDTreeToggle<CR>
 nnoremap <C-p> :Files<CR>
+
+" --- Just Some Notes ---
+" :PlugClean :PlugInstall :UpdateRemotePlugins
+"
+" :CocInstall coc-pairs
+" :CocInstall coc-clangd
+" :CocInstall coc-snippets
+" :CocCommand snippets.edit... FOR EACH FILE TYPE
+
+" set coc.nvim autocomplete ket
+" TAB
+inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
+" ENTER
+" inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+
+
+" air-line
 let g:airline_powerline_fonts = 1
-nnoremap <C-/> : NERDCommenterComment<CR>
-":CocInstall coc-json coc-tsserver
-":CocInstall coc-pyright
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" airline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
 
 " customize
 nnoremap <SPACE> <Nop>
 let mapleader="\<Space>"
 inoremap fg <Esc>
+
+set clipboard=unnamedplus
 set termbidi
 set number
 set cursorline
@@ -60,7 +95,6 @@ set termbidi
 set tabstop=4 
 set shiftwidth=4
 set expandtab
-" coc.nvim
 set hidden
 set nobackup
 set nowritebackup
