@@ -14,7 +14,7 @@ abbr --add gst git stash
 abbr --add gl git log 
 abbr --add glo git log --oneline --all --graph
 abbr --add ga git add
-abbr --add gc git commit
+abbr --add gc git cz
 abbr --add gp git push
 abbr --add gch git checkout
 # system

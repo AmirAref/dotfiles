@@ -1,8 +1,11 @@
 [core]
-	editor = nvim
+	editor = vim
 [user]
 	name = Amir Aref
 	email = amiraref808@gmail.com
+[includeIf "gitdir:~/Activity/Magical/"]
+  path = ~/.gitconfig-work
+
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
@@ -11,7 +14,7 @@
 [init]
 	defaultBranch = master
 [diff]
-	tool = vscode
+	tool = vimdiff
 [diff "tool"]
 	cmd = code --wait --diff $LOCAL $REMOTE
 [difftool "vscode"]
@@ -39,3 +42,7 @@
 	helper = !/usr/bin/gh auth git-credential
 #[http]
     #proxy = 192.168.1.2:8088
+[credential]
+	helper = store
+[push]
+	autoSetupRemote = true
