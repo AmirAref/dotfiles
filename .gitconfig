@@ -14,7 +14,7 @@
 [init]
 	defaultBranch = master
 [diff]
-	tool = vimdiff
+	tool = vscode
 [diff "tool"]
 	cmd = code --wait --diff $LOCAL $REMOTE
 [difftool "vscode"]
@@ -29,7 +29,10 @@
 	lg = log --graph --decorate --oneline
 	sw = switch
 	ch = checkout
-	pom = push origin master
+    pom = push origin master
+    # gitlab
+    mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
+
 [difftool]
 	prompt = false
 [safe]
@@ -42,7 +45,7 @@
 	helper = !/usr/bin/gh auth git-credential
 #[http]
     #proxy = 192.168.1.2:8088
-[credential]
-	helper = store
 [push]
 	autoSetupRemote = true
+[credential]
+	helper = store
