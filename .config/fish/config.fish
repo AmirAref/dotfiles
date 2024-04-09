@@ -28,7 +28,7 @@ abbr --add ff fastfetch
 abbr --add kdrf kdeconnect-cli --refresh
 #abbr --add subl LANG=en_US.UTF-8 LC_TYPE=en_US.UTF-8 subl
 abbr --add ptree tree --gitignore -I "__pycache__" -C --dirsfirst --sort mtime -r
-
+abbr --add buckle buckle -p ~/bucklespring/wav/ -f -g 30 -m "0x6b"
 # use the last command by !!
 function bind_bang
     switch (commandline -t)[-1]
