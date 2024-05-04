@@ -29,10 +29,9 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
   
 
-2. Vim-Plug :
+2. Vundle :
 ```bash
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
   
 
@@ -53,6 +52,9 @@ open the tmux after installition `tmux` then run commmand `Crtl-B`+`I` to instal
 
 
 ## setup vim plugins :  
-run commmand `vim -c "PlugInstall"` to install plugins.  
+run commmand below to install vim's plugins.  
+```bash
+vim +PluginInstall "+CocInstall coc-pyright"
+```
 
 
