@@ -1,102 +1,84 @@
 " Plugins
-call plug#begin()
-Plug 'https://github.com/preservim/nerdtree' " NerdTree
-Plug 'https://github.com/vim-airline/vim-airline' " Status bar
-Plug 'https://github.com/vim-airline/vim-airline-themes' " Status bar Themes
-Plug 'https://github.com/neoclide/coc.nvim' " Auto Completion
-Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
-" fzf
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-" nerdcommenter
-Plug 'preservim/nerdcommenter'
-" code formatter
-Plug 'prettier/vim-prettier', {
-	  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
-Plug 'dense-analysis/ale'
-Plug 'mg979/vim-visual-multi'
-" themes
-Plug 'sonph/onehalf', {'rtp': 'vim/'}
-" vim nevigator
-Plug 'christoomey/vim-tmux-navigator'
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
 
-" preview markdown
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
+" theme plugins
+Plugin 'NLKNguyen/papercolor-theme'
 
-call plug#end()
+" code analysis
+Plugin 'dense-analysis/ale'
 
+" auto complete
+Plugin 'neoclide/coc.nvim', {'branch': 'release', 'do':'npm ci'}
+"Plugin 'yaegassy/coc-ruff', {'do': 'yarn install --frozen-lockfile'}
+" install pyright with : CocInstall coc-pyright
 
-" plugins config
+" airline status bar
+Plugin 'vim-airline/vim-airline'
 
-nnoremap <C-f> :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-i> :NERDTreeToggle<CR>
-nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
+" nerd tree file manager
+Plugin 'preservim/nerdtree'
 
-nnoremap <C-/> : NERDCommenterComment<CR>
+" Git integration (status bar and commands like Gblame)
+Plugin 'tpope/vim-fugitive'
+" Add info to sidebar about git
+Plugin 'airblade/vim-gitgutter'
 
-let g:airline_powerline_fonts = 1
-let g:ale_fix_on_save = 1
-colorscheme onehalfdark
-nnoremap <C-p> :Files<CR>
+" commenter
+Plugin 'preservim/nerdcommenter'
 
-" --- Just Some Notes ---
-" :PlugClean :PlugInstall :UpdateRemotePlugins
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
 "
-" :CocInstall coc-pairs
-" :CocInstall coc-clangd
-" :CocInstall coc-snippets
-" :CocCommand snippets.edit... FOR EACH FILE TYPE
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
 
-" set coc.nvim autocomplete ket
-" TAB
-inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
-" ENTER
-" inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+" set t_Co=256   " This is may or may not needed.
 
-
-" air-line
-let g:airline_powerline_fonts = 1
-
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-
-" airline symbols
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
+" theme config
+set background=dark
+colorscheme PaperColor
 
 " customize
 nnoremap <SPACE> <Nop>
-let mapleader="\<Space>"
+" let mapleader="\<Space>"
+let mapleader=","
 inoremap fg <Esc>
 
+syntax on
 set clipboard=unnamedplus
-set termbidi
 set number
+set hidden
 set cursorline
-set termguicolors
 set signcolumn=yes
 set nowrap
 set scrolloff=7
 set sidescrolloff=20
 set splitbelow
 set splitright
-set termbidi
 
+set mouse=a
 set tabstop=4 
 set shiftwidth=4
 set expandtab
-set hidden
-set nobackup
 set nowritebackup
 set cmdheight=2
 set updatetime=300
@@ -111,16 +93,29 @@ nnoremap <C-t> :terminal<CR>
 vmap <leader>y "+y"
 nmap <leader>y "+y"
 nmap <leader>p "+p"
+
+" cutomize managing
+nnoremap <C-b> <C-w>
+nmap <leader>tn :set nu!<CR>
+nnoremap <leader>vs :vsplit<CR>
+nnoremap <leader>hs :split<CR>
+nnoremap <C-t> :terminal<CR>
+
 " change windows size
 "nnoremap <C-Up> :resize +2<CR>
 "nnoremap <C-Down> :resize -2<CR>
 "nnoremap <C-Left> :vertical resize +2<CR>
 "nnoremap <C-Right> :vertical resize -2<CR>
+"
 " move between tabs
-nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Left> :tabprevious<CR>                                                                            
 nnoremap <C-Right> :tabnext<CR>
-nnoremap <C-Up> :tabfirst<CR>
-nnoremap <C-Down> :tablast<CR>
+
+" move  between panes
+"nnoremap <c-up> <C-w><up>
+"nnoremap <c-down> <C-w><down>
+"nnoremap <c-left> <C-w><left>
+"nnoremap <c-right> <C-w><right>
 
 "" Abbreviations
 "*****************************************************************************
@@ -142,4 +137,54 @@ vnoremap > >gv
 vnoremap < <gv
 
 
+" ale config
+let g:ale_linters = {
+\   'python': ['ruff'],
+\}
+
+" Optional: Configure ALE to automatically fix issues when you save a Python file.
+let g:ale_fixers = {
+\   'python': ['ruff'],
+\}
+let g:ale_python_ruff_use_global = 1
+" let g:ale_fix_on_save = 1
+
+" coc.nvim
+" set coc.nvim autocomplete key
+" TAB
+inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
+" ENTER
+" inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+
+" Add `:Format` command to format current buffer
+command! -nargs=0 Format :call CocActionAsync('format')
+command! -nargs=0 Fix :call CocActionAsync('runCommand', 'ruff.executeAutofix')
+
+" nerd tree
+nnoremap <C-f> :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-i> :NERDTreeToggle<CR>
+nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
+
+
+" airline
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" airline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+
+
+" nerd commenter
+filetype plugin on
+map <leader>c <Plug>NERDCommenterToggle('n', 'Toggle')<Cr>
 

@@ -1,0 +1,9 @@
+{
+    "python.formatting.provider": "ruff",
+    "pyright.organizeimports.provider": "ruff",
+    "python.linting.ruffEnabled": true,
+    "python.linting.enabled": true,
+    "python.linting.lintOnSave": true,
+    "coc.preferences.formatOnSave": true,
+    "python.pythonPath": "python3"
+}
