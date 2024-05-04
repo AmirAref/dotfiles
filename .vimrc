@@ -19,7 +19,7 @@ Plugin 'dense-analysis/ale'
 
 " auto complete
 Plugin 'neoclide/coc.nvim', {'branch': 'release', 'do':'npm ci'}
-"Plugin 'yaegassy/coc-ruff', {'do': 'yarn install --frozen-lockfile'}
+Plugin 'yaegassy/coc-ruff', {'do': 'yarn install --frozen-lockfile'}
 " install pyright with : CocInstall coc-pyright
 
 " airline status bar
@@ -147,6 +147,8 @@ let g:ale_fixers = {
 \   'python': ['ruff'],
 \}
 let g:ale_python_ruff_use_global = 1
+let g:ale_python_ruff_auto_poetry = 1
+"let g:ale_python_auto_virtualenv = 1
 " let g:ale_fix_on_save = 1
 
 " coc.nvim
