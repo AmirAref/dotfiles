@@ -1,5 +1,5 @@
 [core]
-	editor = vim
+	editor = nvim
 [user]
 	name = Amir Aref
 	email = amiraref808@gmail.com
@@ -49,3 +49,4 @@
 	autoSetupRemote = true
 [credential]
 	helper = store
+	useHttpPath = true

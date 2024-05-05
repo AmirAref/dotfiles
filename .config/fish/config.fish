@@ -26,6 +26,7 @@ abbr --add cfg /usr/bin/git --work-tree=$HOME --git-dir=$HOME/.dotfiles
 abbr --add jn jupyter-notebook
 abbr --add ff fastfetch
 abbr --add kdrf kdeconnect-cli --refresh
+abbr --add vim nvim
 #abbr --add subl LANG=en_US.UTF-8 LC_TYPE=en_US.UTF-8 subl
 abbr --add ptree tree --gitignore -I "__pycache__" -C --dirsfirst --sort mtime -r
 abbr --add buckle buckle -p ~/bucklespring/wav/ -f -g 30 -m "0x6b"
@@ -53,4 +54,13 @@ export {no_proxy,NO_PROXY}=127.0.0.1,localhost
 
 # add PATH
 export PATH="/home/amir/.local/bin:$PATH"
+
+# show VIRTUAL_ENV name in fish prompt
+functions -c fish_prompt _old_fish_prompt
+function fish_prompt
+  if set -q VIRTUAL_ENV
+    echo -n -s  "(" (basename "$VIRTUAL_ENV") ")" " "
+  end
+  _old_fish_prompt
+end
 
