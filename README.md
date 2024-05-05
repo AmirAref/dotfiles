@@ -4,22 +4,14 @@ My personal config files (dotfiles) on my linux machines
 
 ```bash
 # Install apps
-sudo pacman -S git tmux vim neovim fish kitty xclip xsel
+sudo pacman -S git tmux vim neovim fish kitty xclip xsel stow
 
 # Clone the repo
-git clone --bare https://github.com/AmirAref/dotfiles.git $HOME/.dotfiles
+git clone https://github.com/AmirAref/dotfiles.git $HOME/.dotfiles
 
-# Create an alias
-alias cfg="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
-
-# Check out the repo
-cfg checkout
-
-# Don't show untracked files
-cfg config --local status.showUntrackedFiles no
-
-# Set up pre-commit
-GIT_DIR=$HOME/.dotfiles GIT_WORK_TREE=$HOME pre-commit install
+# create symlinks using stow
+stow . # all of the dotfiles
+stow nvim # specific package for example : nvim
 ```
 
 ## install plugins and repositoris (submodules):
@@ -29,19 +21,22 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
   
 
+<!--
+
 2. Vundle :
 ```bash
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
-  
 
-3. moc-themes :  
+-->
+
+2. moc-themes :  
 ```bash
 git clone https://github.com/tmux-plugins/tpm ~/.moc/themes
 ```
   
 
-4. omf (oh-my-fish):
+3. omf (oh-my-fish):
 ```bash
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install > install
 fish install --path=~/.local/share/omf --config=~/.config/omf
@@ -50,11 +45,12 @@ fish install --path=~/.local/share/omf --config=~/.config/omf
 ## setup tmux plugins :  
 open the tmux after installition `tmux` then run commmand `Crtl-B`+`I` to install plugins.  
 
-
+<!--
 ## setup vim plugins :  
 run commmand below to install vim's plugins.  
 ```bash
-vim +PluginInstall "+CocInstall coc-pyright"
+nvim
 ```
+-->
 
 
