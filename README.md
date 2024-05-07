@@ -10,8 +10,7 @@ sudo pacman -S git tmux vim neovim fish kitty xclip xsel stow
 git clone https://github.com/AmirAref/dotfiles.git $HOME/.dotfiles
 
 # create symlinks using stow
-stow . # all of the dotfiles
-stow nvim # specific package for example : nvim
+stow nvim git bash fish vim # specific package for example : nvim
 ```
 
 ## install plugins and repositoris (submodules):
