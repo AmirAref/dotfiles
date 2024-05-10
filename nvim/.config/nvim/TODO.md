@@ -6,7 +6,7 @@ Lsp:
 - [ ] setup `ruff.fixAll` and `ruff.OrganizeImports`
 
 Git:
-- [ ] add git plugins like `fugitive` to access easier to git
+- [x] add git plugins like `fugitive` to access easier to git
 
 
 Telescope:
