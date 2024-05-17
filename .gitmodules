@@ -1,0 +1,6 @@
+[submodule "moc/.moc/themes"]
+	path = moc/.moc/themes
+	url = https://github.com/wimstefan/mocp-themes
+[submodule "tmux/.tmux/plugins/tpm"]
+	path = tmux/.tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
