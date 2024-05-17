@@ -50,3 +50,5 @@
 [credential]
 	helper = store
 	useHttpPath = true
+[http]
+	postBuffer = 524288000
