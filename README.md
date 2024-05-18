@@ -8,7 +8,8 @@ sudo pacman -S git tmux vim neovim kitty xclip xsel stow zsh
 
 # Clone the repo
 git clone --recursive https://github.com/AmirAref/dotfiles.git $HOME/.dotfiles
-git submodule update 
+cd $HOME/.dotfiles
+cit submodule update 
 
 # create symlinks using stow
 stow nvim vim tmux git zsh bash # specific package for example : nvim
@@ -37,6 +38,11 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+```
+
+3. oh-my-zsh plugins:
+```bash
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
 ## setup tmux plugins :  

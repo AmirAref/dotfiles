@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -46,7 +46,7 @@ HYPHEN_INSENSITIVE="true"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -75,7 +75,11 @@ HYPHEN_INSENSITIVE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+    git
+    # zsh-history-substring-search
+    zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -92,6 +96,7 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
+export EDITOR='nvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -104,7 +109,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias gs=git status
 
 # abbriviation aliases like fish
 # declare a list of expandable aliases to fill up later
@@ -163,3 +167,11 @@ abbrev-alias vim="nvim"
 abbrev-alias ptree="tree --gitignore -I "__pycache__" -C --dirsfirst --sort mtime -r"
 # abbrev-alias buckle buckle -p ~/bucklespring/wav/ -f -g 30 -m "0x6b"
 abbrev-alias ll="ls -l"
+# proxy 
+abbrev-alias enable_proxy="export {all_proxy,ALL_PROXY,http_proxy,HTTP_PROXY}=\"http://127.0.0.1:2081\""
+abbrev-alias disable_proxy="set --erase {all_proxy,ALL_PROXY,http_proxy,HTTP_PROXY}"
+#export {all_proxy,ALL_PROXY,http_proxy,HTTP_PROXY}=http://127.0.0.1:2081
+
+
+# variables
+export {no_proxy,NO_PROXY}="127.0.0.1,localhost"
