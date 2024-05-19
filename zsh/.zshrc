@@ -175,3 +175,14 @@ abbrev-alias disable_proxy="set --erase {all_proxy,ALL_PROXY,http_proxy,HTTP_PRO
 
 # variables
 export {no_proxy,NO_PROXY}="127.0.0.1,localhost"
+
+# custom functions
+function weather(){
+    # get weather from wttr.in
+    if [[ -n "$1" ]]; then
+        curl "wttr.in/$1";
+    else
+        echo "you should pass a city !";
+    fi
+}
+
