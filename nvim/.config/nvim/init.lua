@@ -382,6 +382,8 @@ require('lazy').setup({
 
       -- See `:help telescope.builtin`
       local builtin = require 'telescope.builtin'
+      -- git
+      vim.keymap.set('n', '<leader>sc', builtin.git_commits, { desc = '[S]earch Git [C]ommits' })
       vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
       vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
       vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
@@ -555,7 +557,8 @@ require('lazy').setup({
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         clangd = {},
-        ast_grep = {},
+        biome = {},
+        -- ast_grep = {},
         -- harper_ls = {},
         -- gopls = {},
         pyright = {
@@ -655,9 +658,10 @@ require('lazy').setup({
       formatters_by_ft = {
         lua = { 'stylua' },
         -- Conform can also run multiple formatters sequentially
-        python = { 'ruff format' },
+        python = { 'ruff_format' },
         -- cpp = { 'clang-format' },
-        json = { 'prettier' },
+        json = { 'prettierd', 'prettier' },
+        -- html = { 'prettierd', 'prettier' },
         --
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- javascript = { { "prettierd", "prettier" } },
@@ -916,3 +920,6 @@ require 'custom.keymaps'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+--
+-- NOTES
+-- we can see the full diagnostic message with <leader-e>
