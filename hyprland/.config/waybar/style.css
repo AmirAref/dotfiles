@@ -94,6 +94,7 @@ window#waybar {
 
 #language,
 #wireplumber, 
+#bluetooth,
 #pulseaudio,
 #battery,
 #network,
@@ -110,8 +111,14 @@ window#waybar {
     color: @orange;
 }
 
+
 #wireplumber.muted {
     color: @comment;
+}
+
+
+#bluetooth.connected{
+    color: @blue;
 }
 
 /* #pulseaudio.device {

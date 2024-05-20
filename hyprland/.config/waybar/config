@@ -5,7 +5,7 @@
 
     "modules-left": ["tray", "cpu", "temperature","memory", "clock"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["hyprland/language", "wireplumber", "pulseaudio#mic", "battery", "network", "backlight"],
+    "modules-right": ["hyprland/language", "wireplumber", "pulseaudio#mic", "bluetooth", "battery", "network", "backlight"],
     
     "tray": {
         "icon-size": 20,
@@ -76,6 +76,15 @@
         "format-source-muted": "",
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
         "tooltip": false
+    },
+    "bluetooth": {
+    	//"format-alt": "bluetooth:{status}",
+	"format-on": "",
+	"format-connected": "",
+	"format-off": "!",
+	"format-disabled": "!",
+	"on-click": "blueman-manager",
+	"tooltip-format": "{status}"
     },
     "battery": {
         "states": {

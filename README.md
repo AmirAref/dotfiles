@@ -21,6 +21,7 @@ mako # on screen notification
 dunst # notification manager
 swaylock # locker
 swaybg # background changer
+blueman # bluetooth manager
 ```
 
 ## Setup dotfiles
