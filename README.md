@@ -2,10 +2,29 @@
 My personal config files (dotfiles) on my linux machines
 
 
+## Install Packages
+this is a list of initial packages that i use (or need).
 ```bash
 # Install apps
 sudo pacman -S git tmux vim neovim kitty xclip xsel stow zsh
+```
 
+## Hyprland Packages
+this is the list of packages are required in [hyprland](https://hyprland.org) window manager
+
+```bash
+wofi # menu launcher
+waybar # top tool bar
+wireplumber # pipewire sound manager
+brightnessctl # change display brightness
+mako # on screen notification
+dunst # notification manager
+swaylock # locker
+swaybg # background changer
+```
+
+## Setup dotfiles
+```bash
 # Clone the repo
 git clone --recursive https://github.com/AmirAref/dotfiles.git $HOME/.dotfiles
 cd $HOME/.dotfiles
@@ -55,5 +74,3 @@ run commmand below to install vim's plugins.
 nvim
 ```
 -->
-
-
