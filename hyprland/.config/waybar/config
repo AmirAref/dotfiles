@@ -55,6 +55,7 @@
         "format": "{volume}% {icon}",
         "format-muted": "",
         "format-icons": ["", "", ""],
+        "on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",
         "tooltip": false
     },
     // "pulseaudio#device": {

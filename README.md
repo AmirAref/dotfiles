@@ -22,6 +22,7 @@ dunst # notification manager
 swaylock # locker
 swaybg # background changer
 blueman # bluetooth manager
+udiskie # usb storage automount
 ```
 
 ## Setup dotfiles
