@@ -23,6 +23,9 @@ swaylock # locker
 swaybg # background changer
 blueman # bluetooth manager
 udiskie # usb storage automount
+swappy # screen shot editing tool
+grim # screenshot tool
+slurp # select a region for screenshot
 ```
 
 ## Setup dotfiles
