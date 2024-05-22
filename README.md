@@ -26,6 +26,8 @@ udiskie # usb storage automount
 swappy # screen shot editing tool
 grim # screenshot tool
 slurp # select a region for screenshot
+nwg-bar # (aur) power control
+cliphist # clipboard manager
 ```
 
 ## Setup dotfiles
