@@ -28,6 +28,8 @@ grim # screenshot tool
 slurp # select a region for screenshot
 nwg-bar # (aur) power control
 cliphist # clipboard manager
+swayidle # idle manager (autp lcok and suspend )
+polkit-kde-agent # password request agent
 ```
 
 ## Setup dotfiles
