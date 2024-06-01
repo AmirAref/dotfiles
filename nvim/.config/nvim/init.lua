@@ -661,7 +661,8 @@ require('lazy').setup({
         python = { 'ruff_format' },
         -- cpp = { 'clang-format' },
         json = { 'prettierd', 'prettier' },
-        -- html = { 'prettierd', 'prettier' },
+        html = { 'prettierd', 'prettier' },
+        htmldjango = { 'prettierd', 'prettier' },
         --
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- javascript = { { "prettierd", "prettier" } },
