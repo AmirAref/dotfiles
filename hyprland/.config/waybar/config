@@ -35,6 +35,8 @@
 
     "hyprland/workspaces": {
         "format": "{icon}",
+        //"format": "{name}",
+        "disable-scroll": false,
         "format-icons": {
             "urgent": "",
             "active": "",
@@ -55,7 +57,8 @@
         "format": "{volume}% {icon}",
         "format-muted": "",
         "format-icons": ["", "", ""],
-        "on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",
+        //"on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",
+        "on-click": "pavucontrol",
         "tooltip": false
     },
     // "pulseaudio#device": {
@@ -75,7 +78,8 @@
         "format": "{format_source}",
         "format-source": "{volume}% ",
         "format-source-muted": "",
-        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+        //"on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+        "on-click": "pavucontrol",
         "tooltip": false
     },
     "bluetooth": {
