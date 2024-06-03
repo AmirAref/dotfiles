@@ -1,4 +1,39 @@
-mode=drun
-width=45%
-insensitive=true
+## Wofi Config
+
+## General
+show=drun
+prompt=type to search ...
+normal_window=true
+layer=top
+
+
+## Geometry
+width=500px
+height=400px
+location=0
+orientation=vertical
+halign=fill
+line_wrap=off
+dynamic_lines=false
+
+## Images
+allow_markup=true
+allow_images=true
+image_size=28
+
+## Search
+exec_search=false
+hide_search=false
+parse_search=false
+insensitive=false
+
+## Other
+hide_scroll=false
 no_actions=true
+sort_order=default
+gtk_dark=false
+filter_rate=100
+
+## Keys
+key_expand=Tab
+key_exit=Escape
