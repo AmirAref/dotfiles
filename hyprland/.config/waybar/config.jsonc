@@ -5,11 +5,39 @@
 
     "modules-left": ["tray", "cpu", "temperature","memory", "clock"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["hyprland/language", "wireplumber", "pulseaudio#mic", "bluetooth", "battery", "network", "backlight"],
+    "modules-right": ["custom/playerctl", "custom/playerlabel", "hyprland/language", "wireplumber", "pulseaudio#mic", "bluetooth", "battery", "network", "backlight"],
     
     "tray": {
         "icon-size": 20,
         "spacing": 10
+    },
+	"custom/playerctl": {
+      "format": "{icon}",
+      "return-type": "json",
+      "max-length": 48,
+      "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+      "on-click-middle": "playerctl play-pause",
+      "on-click": "playerctl previous",
+      "on-click-right": "playerctl next",
+      "format-icons": {
+        "Playing": "<span foreground='#E5B9C6'>󰒮 󰏥 󰒭</span>",
+        "Paused": "<span foreground='#928374'>󰒮 󰐌 󰒭</span>"
+      },
+    },
+
+    "custom/playerlabel": {
+      "format": "<span>{}</span>",
+      "return-type": "json",
+      "max-length": 32,
+      // "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+      "exec": "playerctl -a metadata --format '{\"text\": \"{{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+      "on-click-middle": "playerctl play-pause",
+      "on-click": "playerctl previous",
+      "on-click-right": "playerctl next",
+      "format-icons": {
+        "Playing": "<span foreground='#E5B9C6'>󰒮 󰐌 󰒭</span>",
+        "Paused": "<span foreground='#928374'>󰒮 󰏥 󰒭</span>"
+      },
     },
     "cpu": {
         "format": "{usage}% ",
@@ -38,10 +66,13 @@
       "format": "{icon}",
       "tooltip": false,
       "all-outputs": true,
+	"disable-scroll": false,
+	"on-scroll-up": "hyprctl dispatch workspace -1",
+	"on-scroll-down": "hyprctl dispatch workspace +1",
       "format-icons": {
         "urgent": "",
-	"active": "",
-	"default": ""
+		"active": "",
+		"default": ""
       },
         "on-click": "activate",
         "sort-by-number": true,
@@ -79,6 +110,9 @@
         "format": "{format_source}",
         "format-source": "{volume}% ",
         "format-source-muted": "",
+		"disable-scroll": false,
+		"on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 1%+",
+		"on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 1%-",
         //"on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
         "on-click": "pavucontrol",
         "tooltip": false
@@ -105,7 +139,8 @@
         "interval": 3
     },
     "network": {
-        "format-wifi": "{essid} ({signalStrength}%) ",
+        // "format-wifi": "{essid} ({signalStrength}%) ",
+         "format-wifi": "({signalStrength}%) ",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",

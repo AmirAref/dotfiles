@@ -92,6 +92,8 @@ window#waybar {
     box-shadow: 0.5px 0.5px 3px @background-darker;
 }
 
+#custom-playerctl,
+#custom-label,
 #language,
 #wireplumber, 
 #bluetooth,
@@ -99,8 +101,35 @@ window#waybar {
 #battery,
 #network,
 #backlight {
-    margin: 0 10px;
+    margin: 0 8px;
     background-color: transparent;
+}
+
+#custom-playerctl {
+	/* background: #282828; */
+	padding-left: 5px;
+  padding-right: 1px;
+	border-radius: 16px;
+  /*border-left: solid 1px #282738;*/
+  /*border-right: solid 1px #282738;*/
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 0px;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+}
+
+#custom-playerlabel {
+    padding-left: 1px;
+    padding-right: 2px;
+    border-radius: 16px;
+    /*border-left: solid 1px #282738;*/
+    /*border-right: solid 1px #282738;*/
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: normal;
+    font-style: normal;
 }
 
 #language {

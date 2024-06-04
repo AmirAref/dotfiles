@@ -169,7 +169,10 @@ vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- commands
--- case insensitive quiet and write
+vim.cmd 'abbreviate Q q'
+vim.cmd 'abbreviate Q! q!'
+vim.cmd 'abbreviate W w'
+vim.cmd 'abbreviate WQ wq'
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
