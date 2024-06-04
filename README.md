@@ -1,35 +1,19 @@
 # Dotfiles
-My personal config files (dotfiles) on my linux machines
+My personal config files (dotfiles) on my **Arch linux** machines.
 
 
 ## Install Packages
 this is a list of initial packages that i use (or need).
 ```bash
 # Install apps
-sudo pacman -S git tmux vim neovim kitty xclip xsel stow zsh
+sudo pacman -S --needed git tmux vim neovim kitty xclip xsel stow zsh
 ```
 
 ## Hyprland Packages
-this is the list of packages are required in [hyprland](https://hyprland.org) window manager
+there is the list of packages are required for [hyprland](https://hyprland.org) window manager in [hyprland-pkglist.txt](./hyprland-pkglist.txt) file, install them using following command.
 
 ```bash
-wofi # menu launcher
-waybar # top tool bar
-wireplumber # pipewire sound manager
-brightnessctl # change display brightness
-mako # on screen notification
-dunst # notification manager
-swaylock # locker
-swaybg # background changer
-blueman # bluetooth manager
-udiskie # usb storage automount
-swappy # screen shot editing tool
-grim # screenshot tool
-slurp # select a region for screenshot
-nwg-bar # (aur) power control
-cliphist # clipboard manager
-polkit-kde-agent # password request agent
-hypridle # hyprland idle manager
+cat hyprland-pkglist.txt | cut -d# -f1 | xargs sudo pacman -S --needed
 ```
 
 ## Setup dotfiles

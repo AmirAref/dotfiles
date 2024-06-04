@@ -1,0 +1,19 @@
+wofi # menu launcher
+waybar # top tool bar
+wireplumber # pipewire sound manager
+brightnessctl # change display brightness
+mako # on screen notification
+dunst # notification manager
+swaylock # locker
+swaybg # background changer
+blueman # bluetooth manager
+udiskie # usb storage automount
+swappy # screen shot editing tool
+grim # screenshot tool
+slurp # select a region for screenshot
+nwg-bar # (aur) power control
+cliphist # clipboard manager
+polkit-kde-agent # password request agent
+hypridle # hyprland idle manager
+xdg-desktop-portal-hyprland # screen sharing
+xdg-desktop-portal-gtk # screen sharing
