@@ -19,6 +19,9 @@
       "on-click-middle": "playerctl play-pause",
       "on-click": "playerctl previous",
       "on-click-right": "playerctl next",
+		"disable-scroll": false,
+		"on-scroll-up": "playerctl -a position 5+",
+		"on-scroll-down": "playerctl -a position 5-",
       "format-icons": {
         "Playing": "<span foreground='#E5B9C6'>󰒮 󰏥 󰒭</span>",
         "Paused": "<span foreground='#928374'>󰒮 󰐌 󰒭</span>"
@@ -34,6 +37,9 @@
       "on-click-middle": "playerctl play-pause",
       "on-click": "playerctl previous",
       "on-click-right": "playerctl next",
+		"disable-scroll": false,
+		"on-scroll-up": "playerctl -a position 5+",
+		"on-scroll-down": "playerctl -a position 5-",
       "format-icons": {
         "Playing": "<span foreground='#E5B9C6'>󰒮 󰐌 󰒭</span>",
         "Paused": "<span foreground='#928374'>󰒮 󰏥 󰒭</span>"
@@ -140,7 +146,7 @@
     },
     "network": {
         // "format-wifi": "{essid} ({signalStrength}%) ",
-         "format-wifi": "({signalStrength}%) ",
+         "format-wifi": "{signalStrength}% ",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",

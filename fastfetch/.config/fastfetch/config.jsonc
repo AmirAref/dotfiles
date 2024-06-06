@@ -10,7 +10,7 @@
 			"left":3
 		},
         "width": 32,
-        "height": 14
+        // "height": 14
     },
     "display": {
         "separator": "->   ",
