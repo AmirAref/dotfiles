@@ -27,7 +27,7 @@ stow nvim vim tmux git zsh bash fastfetch # specific package for example : nvim
 there is the list of packages are required for [hyprland](https://hyprland.org) window manager in [hyprland-pkglist.txt](./hyprland-pkglist.txt) file, install them using following command.
 
 ```bash
-cat hyprland-pkglist.txt | cut -d# -f1 | xargs sudo pacman -S --needed
+sudo pacman -S --needed $(cat hyprland-pkglist.txt | cut -d# -f1)
 ```
 
 
