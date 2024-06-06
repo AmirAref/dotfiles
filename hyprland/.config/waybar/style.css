@@ -150,6 +150,9 @@ window#waybar {
     color: @blue;
 }
 
+#bluetooth.off, #bluetooth.disabled{
+    color: @comment;
+}
 /* #pulseaudio.device {
     color: @purple;
 } */
