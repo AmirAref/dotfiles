@@ -173,6 +173,8 @@ vim.cmd 'abbreviate Q q'
 vim.cmd 'abbreviate Q! q!'
 vim.cmd 'abbreviate W w'
 vim.cmd 'abbreviate WQ wq'
+vim.cmd 'abbreviate Wq wq'
+vim.cmd 'abbreviate wQ wq'
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
@@ -669,6 +671,7 @@ require('lazy').setup({
         -- cpp = { 'clang-format' },
         json = { 'prettierd', 'prettier' },
         html = { 'prettierd', 'prettier' },
+        sh = { 'termux-language-server' },
         htmldjango = { 'prettierd', 'prettier' },
         --
         -- You can use a sub-list to tell conform to run *until* a formatter
