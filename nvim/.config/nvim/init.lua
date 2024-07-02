@@ -670,7 +670,7 @@ require('lazy').setup({
         python = { 'ruff_format' },
         -- cpp = { 'clang-format' },
         json = { 'prettierd', 'prettier' },
-        html = { 'prettierd', 'prettier' },
+        html = { 'prettier', 'prettierd' },
         sh = { 'termux-language-server' },
         htmldjango = { 'prettierd', 'prettier' },
         --

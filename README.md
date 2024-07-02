@@ -28,6 +28,9 @@ there is the list of packages are required for [hyprland](https://hyprland.org) 
 
 ```bash
 sudo pacman -S --needed $(cat hyprland-pkglist.txt | cut -d# -f1)
+
+# also install the following packages from aur :
+# nwg-bar : (aur) power control
 ```
 
 
