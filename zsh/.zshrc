@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-export PATH=$HOME/.cargo/env:$PATH
-export PATH=$HOME/.rye/env:$PATH
+# export PATH=$HOME/.cargo/env:$PATH
+# export PATH=$HOME/.rye/env:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -170,9 +170,8 @@ abbrev-alias ptree="tree --gitignore -I "__pycache__" -C --dirsfirst --sort mtim
 # abbrev-alias buckle buckle -p ~/bucklespring/wav/ -f -g 30 -m "0x6b"
 abbrev-alias ll="ls -l"
 # proxy 
-abbrev-alias enable_proxy="export {all_proxy,ALL_PROXY,http_proxy,HTTP_PROXY}=\"http://127.0.0.1:2081\""
+abbrev-alias enable_proxy="export {all_proxy,ALL_PROXY,http_proxy,HTTP_PROXY}=\"http://127.0.0.1:1080\""
 abbrev-alias disable_proxy="set --erase {all_proxy,ALL_PROXY,http_proxy,HTTP_PROXY}"
-#export {all_proxy,ALL_PROXY,http_proxy,HTTP_PROXY}=http://127.0.0.1:2081
 
 
 # variables

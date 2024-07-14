@@ -14,7 +14,7 @@ sudo pacman -S --needed git tmux vim neovim kitty xclip xsel stow zsh
 # Clone the repo
 git clone --recursive https://github.com/AmirAref/dotfiles.git $HOME/.dotfiles
 cd $HOME/.dotfiles
-cit submodule update 
+git submodule init && git submodule update 
 ```
 then with following command you can create link for dotfiles for any module that you want, just write it after `stow ` :
 
