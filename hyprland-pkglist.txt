@@ -17,3 +17,4 @@ hypridle # hyprland idle manager
 xdg-desktop-portal-hyprland # screen sharing
 xdg-desktop-portal-gtk # screen sharing
 watchexec # watch files changes to excute a command
+kanshi # monitor mangamenet tool
