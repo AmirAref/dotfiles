@@ -49,6 +49,6 @@
 	autoSetupRemote = true
 [credential]
 	helper = store
-	useHttpPath = true
+	# useHttpPath = true
 [http]
 	postBuffer = 524288000
