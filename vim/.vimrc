@@ -18,8 +18,8 @@ Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'dense-analysis/ale'
 
 " auto complete
-Plugin 'neoclide/coc.nvim', {'branch': 'release', 'do':'npm ci'}
-Plugin 'yaegassy/coc-ruff', {'do': 'yarn install --frozen-lockfile'}
+" Plugin 'neoclide/coc.nvim', {'branch': 'release', 'do':'npm ci'}
+" Plugin 'yaegassy/coc-ruff', {'do': 'yarn install --frozen-lockfile'}
 " install pyright with : CocInstall coc-pyright
 
 " airline status bar
@@ -154,13 +154,13 @@ let g:ale_python_ruff_auto_poetry = 1
 " coc.nvim
 " set coc.nvim autocomplete key
 " TAB
-inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
+" inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
 " ENTER
 " inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 " Add `:Format` command to format current buffer
-command! -nargs=0 Format :call CocActionAsync('format')
-command! -nargs=0 Fix :call CocActionAsync('runCommand', 'ruff.executeAutofix')
+" command! -nargs=0 Format :call CocActionAsync('format')
+" command! -nargs=0 Fix :call CocActionAsync('runCommand', 'ruff.executeAutofix')
 
 " nerd tree
 nnoremap <C-f> :NERDTreeFocus<CR>
