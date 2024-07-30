@@ -42,10 +42,10 @@ sudo pacman -S --needed $(cat hyprland-pkglist.txt | cut -d# -f1)
   
 
 
-<!-- 1. Vundle : -->
-<!-- ```bash -->
-<!-- git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim -->
-<!-- ``` -->
+- Vundle :
+```bash
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
 
 <!-- 2. moc-themes :   -->
 <!-- ```bash -->
@@ -53,13 +53,13 @@ sudo pacman -S --needed $(cat hyprland-pkglist.txt | cut -d# -f1)
 <!-- ``` -->
   
 
-1. OMZ and OMB (oh-my-zsh, oh-my-bash):
+- OMZ and OMB (oh-my-zsh, oh-my-bash):
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 ```
 
-2. oh-my-zsh plugins:
+- oh-my-zsh plugins:
 ```bash
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
