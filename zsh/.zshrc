@@ -48,7 +48,7 @@ HYPHEN_INSENSITIVE="true"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -155,12 +155,16 @@ abbrev-alias gst="git stash"
 abbrev-alias gl="git log"
 abbrev-alias glo="git log --oneline --all --graph"
 abbrev-alias ga="git add"
-abbrev-alias gc="git cz"
+abbrev-alias gc="git commit"
 abbrev-alias gp="git push"
 abbrev-alias gch="git checkout"
 # system
 abbrev-alias cl="clear"
 abbrev-alias mk="mkdir"
+# tmux
+abbrev-alias ts="tmux ls"
+abbrev-alias tn="tmux new -s "
+abbrev-alias ta="tmux a -t "
 # cusotm
 abbrev-alias jn="jupyter-notebook"
 abbrev-alias ff="fastfetch"
@@ -168,7 +172,7 @@ abbrev-alias kdrf="kdeconnect-cli --refresh"
 abbrev-alias vim="nvim"
 abbrev-alias ptree="tree --gitignore -I "__pycache__" -C --dirsfirst --sort mtime -r"
 # abbrev-alias buckle buckle -p ~/bucklespring/wav/ -f -g 30 -m "0x6b"
-abbrev-alias ll="ls -l"
+abbrev-alias ll="ls -lh"
 # proxy 
 abbrev-alias enable_proxy="export {all_proxy,ALL_PROXY,http_proxy,HTTP_PROXY}=\"http://127.0.0.1:1080\""
 abbrev-alias disable_proxy="set --erase {all_proxy,ALL_PROXY,http_proxy,HTTP_PROXY}"
