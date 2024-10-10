@@ -52,3 +52,5 @@
 	# useHttpPath = true
 [http]
 	postBuffer = 524288000
+[pager]
+	branch = false

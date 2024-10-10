@@ -151,6 +151,7 @@ zle -N accept-line expand-alias-and-accept-line
 
 # git
 abbrev-alias gs="git status"
+abbrev-alias gb="git branch"
 abbrev-alias gst="git stash"
 abbrev-alias gl="git log"
 abbrev-alias glo="git log --oneline --all --graph"
@@ -191,3 +192,5 @@ function weather(){
     fi
 }
 
+
+. "$HOME/.cargo/env"
