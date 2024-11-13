@@ -2,7 +2,7 @@
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 # export PATH=$HOME/.cargo/env:$PATH
 # export PATH=$HOME/.rye/env:$PATH
-
+. "$HOME/.cargo/env"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -180,7 +180,7 @@ abbrev-alias disable_proxy="set --erase {all_proxy,ALL_PROXY,http_proxy,HTTP_PRO
 
 
 # variables
-export {no_proxy,NO_PROXY}="127.0.0.1,localhost"
+# export {no_proxy,NO_PROXY}="127.0.0.1,localhost"
 
 # custom functions
 function weather(){
@@ -193,4 +193,7 @@ function weather(){
 }
 
 
-. "$HOME/.cargo/env"
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)

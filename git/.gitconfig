@@ -51,6 +51,6 @@
 	helper = store
 	# useHttpPath = true
 [http]
-	postBuffer = 524288000
+	postBuffer = 1048576000
 [pager]
 	branch = false

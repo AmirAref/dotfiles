@@ -29,7 +29,7 @@
     },
 
     "custom/playerlabel": {
-      "format": "<span>{}</span>",
+      "format": "<span foreground='#E5B9C6'>{}</span>",
       "return-type": "json",
       "max-length": 32,
       // "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
@@ -152,7 +152,8 @@
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
-        "interval": 3
+        "interval": 3,
+		"on-click": "nm-connection-editor",
     },
     "backlight": {
         "format": "{percent}% {icon}",
