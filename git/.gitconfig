@@ -14,11 +14,15 @@
 [init]
 	defaultBranch = master
 [diff]
-	tool = nvim
+	; tool = nvim
+    tool = vscode
 [diff "tool"]
 	cmd = nvim -d $LOCAL $REMOTE
+    ; cmd = code --diff $LOCAL $REMOTE
 [difftool "nvim"]
 	cmd = nvim -d $LOCAL $REMOTE
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
 [merge]
       tool = vscode
 [mergetool "vscode"]
